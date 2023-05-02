@@ -40,4 +40,8 @@ SELECT 상품명, 가격 FROM temp;
 # Q. 현재 테이블의 모든 컬럼을 출력, 가격 낮은 순으로
 SELECT * FROM temp ORDER BY 가격;
 
-# Q.
+# Q. 모든 컬럼 출력, 가격 낮은 순으로, 가격이 같으면 카테고리 가나다순으로
+SELECT * FROM temp ORDER BY 가격, 카테고리;
+
+# Q. 근무기간 낮은 순으로, 근무기간 같으면 이름 가나다순으로
+SELECT * FROM employee ORDER BY 근무기간, 이름
