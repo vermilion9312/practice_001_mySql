@@ -32,4 +32,16 @@ HAVING 고객등급 = 'vip';
 -- 결과 표시는 VIP만
 
 -- Q. 캡처12-1.png 처럼 cad 테이블에서 연체횟수마다 몇 명 있는지 출력
+SELECT 연체횟수, COUNT(*) AS 몇명이냐면 FROM card
+GROUP BY 연체횟수 ORDER BY 연체횟수;
 
+-- Q. 위에서 출력한 결과가 너무 길어서 '몇명이냐면' 컬럼의 값이 1명인 행은
+-- 안 보이게 필터링해봅시다
+SELECT 연체횟수, COUNT(*) AS 몇명이냐면 FROM card
+GROUP BY 연체횟수 HAVING 몇명이냐면 != 1 ORDER BY 연체횟수;
+
+-- Q. 캡처13-1.png 처럼 card 테이블 에서 회원등급별로 최대사용금액과
+-- 최소사용금액이 몇 배나 차이나는지 구하시오
+SELECT 고객등급, MAX(사용금액) AS 최대, MIN(사용금액) AS 최소,
+MAX(사용금액) / MIN(사용금액) AS 몇배 FROM card GROUP BY 고객등급
+ORDER BY 고객등급;

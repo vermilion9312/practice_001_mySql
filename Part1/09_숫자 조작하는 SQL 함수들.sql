@@ -1,0 +1,23 @@
+SELECT GREATEST(5, 3, 2, 1, 4);
+SELECT LEAST(5, 3, 2, 1, 4);
+-- 행이나 배열 안에서 최대값, 최솟값을 뽑아줌
+-- MAX, MIN은 컬럼
+
+SELECT FLOOR(10.1);
+SELECT FLOOR(10.9);
+-- 내림 10, 10
+
+SELECT CEIL(10.1);
+SELECT CEIL(10.9);
+-- 올림 11, 11
+
+SELECT ROUND(10.777, 2);
+SELECT TRUNCATE(10.777, 2); 
+-- 일정 자릿수 반올림 / 내림
+-- 10.78, 10.77
+
+SELECT POWER(4, 2);
+-- 4^2
+
+SELECT ABS(-100);
+-- 100
